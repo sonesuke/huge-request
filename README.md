@@ -10,7 +10,7 @@ The first time only, you need to build the parquet-wasm module:
 ./build-parquet-wasm.sh
 ```
 
-This will create parquet-wasm directory by cutom compiling the parquet-wasm module.
+This will create parquet-wasm directory by custom compiling the parquet-wasm module.
 The reason for this is that the frontend only needs to read the Parquet data.
 
 ```bash
