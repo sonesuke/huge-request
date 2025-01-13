@@ -12,7 +12,7 @@ function App() {
 
   const readHandler = async () => {
     const WASM_MEMORY = wasmMemory();
-    const data = await fetch("./test.parquet");
+    const data = await fetch("http://localhost:8080/download-parquet");
     const buffer = new Uint8Array(await data.arrayBuffer());
     const arrowWasmTable = readParquet(buffer);
     const ffiTable = arrowWasmTable.intoFFI();
