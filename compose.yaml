@@ -1,0 +1,14 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0.7
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./volumes/keycloak:/opt/keycloak/data
+    command: [start-dev]
+
+  
+
